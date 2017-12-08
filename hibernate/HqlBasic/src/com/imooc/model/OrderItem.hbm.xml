@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.imooc.model.OrderItem" table="ORDERITEM">
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="increment" />
+		</id>
+		<many-to-one name="commodity" class="com.imooc.model.Commodity" fetch="join">
+			<column name="COMMODITY" />
+		</many-to-one>
+		<many-to-one name="order" class="com.imooc.model.Order" fetch="join">
+			<column name="ORDERID" />
+		</many-to-one>
+		<property name="discount" type="java.lang.Double">
+			<column name="DISCOUNT" />
+		</property>
+		<property name="actPrice" type="java.lang.Double">
+			<column name="ACTPRICE" />
+		</property>
+		<property name="amount" type="java.lang.Double">
+			<column name="AMOUNT" />
+		</property>
+	</class>
+</hibernate-mapping>

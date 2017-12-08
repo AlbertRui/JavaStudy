@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.imooc.model.Seller" table="SELLER">
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="increment" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="tel" type="java.lang.String">
+			<column name="TEL" />
+		</property>
+		<property name="address" type="java.lang.String">
+			<column name="ADDRESS" />
+		</property>
+		<property name="website" type="java.lang.String">
+			<column name="WEBSITE" />
+		</property>
+		<property name="star" type="java.lang.Integer">
+			<column name="STAR" />
+		</property>
+		<property name="business" type="java.lang.String">
+			<column name="BUSINESS" />
+		</property>
+	</class>
+</hibernate-mapping>

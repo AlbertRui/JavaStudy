@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="sessionFactory">
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1/webshop</property>
+  <property name="hibernate.connection.password">root</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.connection.useUnicode">true</property>
+  <property name="connection.characterEncoding">UTF-8</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.format_sql">true</property>
+  <mapping resource="com/imooc/model/Seller.hbm.xml"/>
+  <mapping resource="com/imooc/model/Customer.hbm.xml"/>
+  <mapping resource="com/imooc/model/Commodity.hbm.xml"/>
+  <mapping resource="com/imooc/model/Order.hbm.xml"/>
+  <mapping resource="com/imooc/model/OrderItem.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>
