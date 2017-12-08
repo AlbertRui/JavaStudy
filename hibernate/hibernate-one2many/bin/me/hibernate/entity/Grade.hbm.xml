@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-8 16:59:17 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="me.hibernate.entity.Grade" table="GRADE">
+        <id name="gid" type="int">
+            <column name="GID" />
+            <generator class="increment" />
+        </id>
+        <property name="gname" type="java.lang.String">
+            <column name="GNAME" />
+        </property>
+        <property name="gdesc" type="java.lang.String">
+            <column name="GDESC" />
+        </property>
+        <set name="students" table="STUDENT" inverse="true" lazy="true">
+            <key>
+                <column name="GID" />
+            </key>
+            <one-to-many class="me.hibernate.entity.Student" />
+        </set>
+    </class>
+</hibernate-mapping>
