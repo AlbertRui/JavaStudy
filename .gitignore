@@ -43,6 +43,7 @@ Thumbs.db
 .settings
 .classpath
 .metadata
+.obj
 
 # IDEA project file #
 #####################
@@ -60,4 +61,4 @@ target
 ##########
 ./build
 ./dist
-bin/
+bin/*
